@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Logisti-Cas</title>
+  <link href="https://use.typekit.net/tro1mso.css" rel="stylesheet" crossorigin="anonymous" />
+  <link href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" rel="stylesheet" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="general.css">
+  <link rel="preload" href="img/back.jpg" as="image" />
+</head>
+
+
+
+
+
+<div id="inicio">
+  
+  <div class="disclaimer">
+    <p class="disclaimer-text"> Creado por Victor Alfonso Castro Castro. Grupo 4AV. <br/> Proyecto final para Estancia I. </p>
+  </div>
+
+  <div class="disclaimerimg">
+    <img src="img/logo_UPBC_Horizontal.png" alt="Descripción de la imagen" width="200">
+</div>
+ 
+</div>
+
+
+<body>
+  <img
+    style="position: absolute;top: -1000px;"
+    src="data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA"
+    onload="document.body.classList.add('has-webp')" />
+  <div class="intro">
+    <div class="main">
+      <div class="back-overlay"></div>
+      <div class="title">
+        <h1>Logisti-Cas</h1>
+        <p lang="es"></p>
+        <p lang="es">Optimizando tu cadena de suministro</p>
+        <h2>Soluciones integrales en logística</h2>
+
+
+   
+
+<div class="button-container">
+  <span>
+    <a i18n="integrantes_equipo" class="button members" href="#members-box">Contáctanos</a><br />
+  </span>
+
+  <span>
+    <a i18n="join-reddit" class="button reddit" href="#references-box">Nuestros Servicios</a><br />
+  </span>
+</div>
+
+<div id="members-box" class="info-box">
+  <div class="info-box-content">
+    <span class="close-btn">&times;</span>
+   <h2>Contacto</h2>
+        <br/>
+        <p>Estamos ubicados en:</p>
+        <p>Dirección: Calle Principal, Ciudad, País</p>
+        <p>Teléfono: +123456789</p>
+        <p>Email: info@logisti-cas.com</p>
+  </div>
+</div>
+
+<div id="references-box" class="info-box">
+  <div class="info-box-content" style="text-align: left;">
+    <span class="close-btn">&times;</span>
+    <h2 style="text-align: center;">Nuestros Servicios</h2>
+        <br/>
+        <p>Ofrecemos una gama de servicios logísticos, incluyendo:</p>
+        <ul>
+          <li>Transporte terrestre</li>
+          <li>Almacenamiento y distribución</li>
+          <li>Gestión de inventario</li>
+
+
+           <br/>
+  </div>
+</div>
+
+<script>
+  // Obtener todos los enlaces con clase "button"
+  const buttons = document.querySelectorAll('.button');
+
+  // Agregar evento de clic a cada enlace
+  buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault(); // Evitar el comportamiento predeterminado de los enlaces
+      
+      // Obtener el ID del cuadro de información desde el atributo href del enlace
+      const target = button.getAttribute('href');
+      
+      // Mostrar el cuadro de información correspondiente
+      document.querySelector(target).classList.toggle('active');
+    });
+  });
+
+  // Obtener todas las clases "close-btn"
+  const closeButtons = document.querySelectorAll('.close-btn');
+
+  // Agregar evento de clic a cada botón de cierre
+  closeButtons.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+      // Ocultar el cuadro de información padre
+      closeButton.closest('.info-box').classList.remove('active');
+    });
+  });
+</script>
+
+
+
+
+  <br />
+          <span i18n="scroll-notice" class="scroll-notice"><i class="fas fa-arrow-down"></i>¡Desplázate para obtener más información!</span>
+          <p style="display: none; /* Now the mobile version is good enough */" i18n="mobile-disclaimer" class="mobile disclaimer">
+            Lamentamos mucho, pero la versión móvil de este sitio web fue apresurada y <b>no es de la mejor calidad</b>. No pensé que alguien lo visitaría en un teléfono, la verdad.
+          </p>
+        </div>
+       
+      </div>
+      <canvas class="snow full canvas-background"></canvas>
+    </div>
+</body>
+</html>
+<div class="scroll">
+  <div i18n-group="become-a-satania-follower" class="section">
+    <div class="left image">
+      <picture>
+        <source srcset="img/webp/satania_thumbsup.webp" type="image/webp">
+        <img src="img/satania_thumbsup.png" alt="" />
+      </picture>
+    </div>
+    <div class="right">
+      <h2 i18n="large-text">¿Quienes somos?</h2>
+      <p class="justificado" i18n="sub-text"><b>Empresa dedicada al transporte de carga seca y refrigerada, almacenaje y picking de mercancia.</p><p>Trabajamos en parte de Baja California (Mexicali y Tijuana) y parte de sonora (San Luis R.C.)</p>
+      <span i18n="small-text" class="small">  </span>
+    </div>
+  </div>
+  <div i18n-group="she-is-beautiful" class="section">
+    <div class="left">
+      <h2 i18n="large-text">¿Donde nos ubicamos?</h2>
+      <p class="justificado" i18n="sub-text">Carretera a San Luis s/n EJIDO CUERNAVACA, 21624 Mexicali, B.C.</p>
+      <span i18n="small-text" class="small">sample text sample text sample text sample text sample text sample text</span>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13448.789375971357!2d-115.3420181!3d32.5742607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d775ad3b5c6319%3A0x6276455153ef437d!2sCENTRAL%20DE%20ABASTOS%20DE%20MEXICALI!5e0!3m2!1ses-419!2smx!4v1712033245741!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div i18n-group="end-the-waifu-war" class="section">
+    <div class="left image">
+      <picture>
+        <source srcset="img/webp/satania_happy.webp" type="image/webp">
+        <img src="img/satania_happy.png" alt="" />
+      </picture>
+    </div>
+    <div class="right">
+      <h2 i18n="large-text">Promoviendo la paz y el entendimiento entre todas las culturas.</h2>
+      <p i18n="sub-text">Demostremos que la diversidad es una fortaleza y que podemos aprender y crecer juntos.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div i18n-group="she-is-perfect" class="center">
+      <h2 i18n="large-text">Cada individuo es perfecto tal como es.</h2>
+      <p
+
+ i18n="sub-text">Celebramos la diversidad y reconocemos el valor de cada persona en nuestra sociedad.</p>
+      <div id="searchbar" class="google-searchbar">
+        <span id="searchbar-text" i18n="searchbar-name">diversidad</span>
+        <div class="buttons">
+          <picture>
+            <source srcset="img/webp/google_mic.webp" type="image/webp">
+            <img id="search-by-voice" src="img/google_mic.png" height="24px" />
+          </picture>
+          <img id="search-button" src="img/google_search.svg" height="24px" />
+        </div>
+      </div><br />
+      <div i18n-group="google-definition" class="google-definition">
+        <h1 i18n="name" id="definition-name">diversidad</h1>
+        <h3><span i18n="prononciation">/di·ver·si·dad/</span> <i id="listen" class="fas fa-volume-up"></i></h3>
+        <div i18n="noun" class="noun">
+          sustantivo
+        </div>
+        <div i18n-group="definition-1" class="definition">
+          <span i18n="definition">Cualidad de diverso o variado.</span>
+          <div class="example">
+            <span i18n="example">"La diversidad cultural enriquece nuestra sociedad."</span>
+            <div class="synonyms">
+              <span><i i18n="synonyms">sinónimos:</i></span>
+              <span i18n="synonyms-list">variedad, multiplicidad, heterogeneidad, pluralidad</span>
+            </div>
+          </div>
+        </div>
+        <div i18n-group="definition-2" class="definition">
+          <span i18n="definition">Existencia de varias formas distintas de ser, de estar o de manifestarse.</span>
+          <div class="example">
+            <span i18n="example">"La diversidad de opiniones es fundamental para el progreso."</span>
+            <div class="synonyms">
+              <span><i i18n="synonyms">sinónimos:</i></span>
+              <span i18n="synonyms-list">variedad, multiplicidad, heterogeneidad, pluralidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+    <div i18n-group="autism" class="section">
+      <canvas class="snow full canvas-background"></canvas>
+
+      <div class="left">
+        <h2 i18n="large-text">Multiculturalidad</h2>
+        <p class="justificado" i18n="sub-text">La multiculturalidad reconoce la diversidad cultural existente en todos los ámbitos y promueve el derecho a esta diversidad. Engloba el arte, las creencias, la moral, los descubrimientos y las costumbres.<br />
+      </div>
+
+      <div class="right image">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/4daRh9ValwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="nose-button" onclick="startSnow()"></div>
+      </div>
+    </div>
+
+   
+
+   
+
+    <div i18n-group="raviolli-raviolli" class="section">
+      <div class="left">
+        <h2 i18n="large-text">La multiculturalidad<br />se caracteriza por: </h2>
+        <p i18n="sub-text">●  Promover el respeto y la tolerancia por las diferencias.</p>
+        <p i18n="sub-text">●  Desterrar prejuicios y estereotipos asociados.</p>
+        <p i18n="sub-text">●  Generar una convivencia armoniosa.</p>
+        <p i18n="sub-text">●  Crear intercambios entre los diferentes grupos.</p>
+      </div>
+
+      <div class="right image">
+        <picture>
+          <source srcset="img/webp/satania_sad.webp" type="image/webp">
+          <img src="img/satania_sad.png" alt="" />
+        </picture>
+      </div>
+    </div>
+
+
+    <div i18n-group="large-text" class="section">
+      <div class="left image">
+        <picture>
+          <source srcset="img/webp/satania_evil.webp" type="image/webp">
+          <img src="img/satania_evil.png" alt="" />
+        </picture>
+      </div>
+
+      <div class="right">
+        <h2 i18n="large-text">¡En nosotros esta el cambio!</h2>
+        <p class="justificado" i18n="sub-text">Como sociedad debemos favorecer el intercambio de ideas y la integración social poniendo al respeto como prioridad. Conocer distintas culturas es el medio ideal para tener una vida intelectual, afectiva, moral y espiritual más enriquecedora.<br /> <br /> Toda expresión cultural debe ser preservada y mostrada a las generaciones futuras para nutrir el conocimiento y fomentar la diversidad. Respetar las diferencias entre culturas es necesario para la paz, la estabilidad y el desarrollo.</p>
+      </div>
+    </div>
+
+  
+</div>
+
+
+
+
+  <div i18n-group="end" class="main end">
+  <div class="back-overlay"></div>
+
+ <div class="conclusions-wrapper">
+  <div class="t1">
+    <h1 class="conclusion-title">Conclusiones del Equipo</h1>
+    <h2 class="conclusion-subtitle">Aquí están nuestras conclusiones individuales:</h2>
+  </div>
+
+  <div class="conclusion-container">
+    <div class="conclusion">
+      <p class="conclusion-member">Andres Jaquez Alcala</p>
+      <p class="justificado">
+        A todas las personas se les debe respeto sobre todo si estas te respetan,
+sin importar las diferencias que exista entre nosotros no solo en características físicas
+sino también en nuestras costumbres culturales, seguimos siendo humanos, no tenemos porque
+perjudicarnos los unos a los otros, porque simplemente no hay un motivo real para eso.
+"Si se priva a alguien de sus derechos humanos, se pierde a uno mismo, se deja de ser humano"
+      </p>
+    </div>
+
+    <div class="conclusion">
+      <p class="conclusion-member">Victor Alfonso Castro Castro</p>
+      <p class="justificado">
+        Pienso que el respeto a la diversidad es importante porque cada individuo aporta una perspectiva única que hace nuestro mundo más interesante. Imaginar un mundo donde todos somos iguales sería desalentador y aburrido, ya que nuestras diferencias culturales, lingüísticas, costumbres, vestimenta y valores nos hacen vibrantes y únicos. La diversidad nos enseña a ser más tolerantes, compasivos y comprensivos. Además, impulsa la innovación y el progreso ya que todos tenemos perspectivas diferentes al afrontar un problema. 
+      </p>
+    </div>
+
+    <div class="conclusion">
+     <p class="conclusion-member">Jackeline Camacho Fimbres</p>
+      <p class="justificado">
+       Es importante que cada persona asuma la responsabilidad de promover un ambiente inclusivo, libre de prejuicios y estereotipos, y trabajar en conjunto para crear un futuro en el que la diversidad y multiculturalidad sean celebradas y apreciadas en todas sus formas. Solo a través del respeto y la comprensión mutua es posible construir una sociedad más justa, armoniosa y equitativa para todas las personas.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <div class="footer">
+    <a href="#inicio">
+      <picture>
+        <source srcset="img/scroll.png" type="image/png">
+        <img src="img/github_link.png" alt="Flecha de regreso al inicio" />
+      </picture>
+    </a>
+  </div>
+</div>
+
+
+
+
+      <canvas class="snow full canvas-background"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-101177248-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+
+
+</div>
+</html>
+
+

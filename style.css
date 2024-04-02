@@ -1,0 +1,641 @@
+/* LAYOUT - Every rules that relates to the general layout of the website goes here */
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: top right;
+	background-attachment: fixed;
+}
+
+.main .small {
+	opacity: 1;
+	margin-top: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.justificado {
+  text-align: justify;
+}
+
+  .info-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro */
+    display: none;
+    z-index: 20000;
+  }
+
+  .info-box-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333333;
+  padding: 20px;
+
+}
+
+  .info-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .info-box.active {
+    display: block;
+  }
+
+
+
+.main .scroll-notice {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 80%;
+	font-size: 18pt;
+	z-index: 1000;
+}
+
+.main .scroll-notice .fas {
+	font-size: 28pt;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.main .footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding: 10px;
+	z-index: 10;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.main .footer img {
+	height: 70px;
+	margin: 10px;
+	opacity: 0.6;
+	transition: 0.1s all linear;
+}
+
+.main .footer img:hover {
+	opacity: 1;
+}
+
+.main .credits {
+	flex: auto;
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0 1px 5px #000;
+	z-index: 150;
+	text-align: right;
+	margin-left: 20px;
+}
+
+.main .credits b {
+	font-size: 22px;
+}
+
+.back-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+	z-index: 5;
+}
+
+.main .title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+	z-index: 10;
+}
+
+.main .title h1 {
+	font-size: 128px;
+	line-height: 128px;
+	margin: 0;
+	font-weight: 600;
+	
+	text-shadow:           
+            -2px 2px 0 #000,
+            5px 5px 0 #000;
+}
+
+.main .title h2 {
+	font-size: 32px;
+	margin: 0;
+	font-weight: normal;
+	
+
+}
+
+.main .title p {
+	margin: 0 0 10px;
+}
+
+.main .button-container {
+	margin: 60px;
+}
+
+.main .button-container > span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main #discord-count,
+.main #reddit-count {
+	display: none;
+}
+
+.intro {
+	background-image: url("./img/back(1).jpg");
+	background-size: cover;
+	background-position: top right;
+	background-attachment: fixed;
+}
+
+.has-webp .intro {
+	background-image: url("./img/back(1).jpg");
+}
+
+.intro .title h2 {
+	background: #e669;
+	padding: 5px;
+	border-radius: 5px;
+
+}
+
+.end {
+	background-image: url("./img/back_end.jpg");
+}
+
+.has-webp .end {
+	background-image: url("./img/webp/back_end.webp");
+}
+
+.end .title h2 {
+	margin-top: 30px;
+}
+
+.scroll {
+	box-shadow: 0 -12.5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.section {
+	width: 100%;
+	overflow: hidden;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 0 10px;
+	background: #fff;
+	color: #404040;
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
+	border-bottom: solid 2px #ddd;
+}
+
+.section:nth-child(odd) {
+	background-color: #F5F7F9;
+}
+
+.section:nth-child(even) {
+	background-color: #EAECEE;
+}
+
+.section .center,
+.section .left,
+.section .right {
+	display: inline-block;
+	width: 50%;
+	max-width: 600px;
+	z-index: 10;
+	padding: 50px 0;
+	margin: 0 10px;
+	text-align: left;
+}
+
+.section .image {
+	padding : 0;
+	display: flex;
+
+}
+
+.section .image img {
+	max-width: 700px;
+	max-height: 500px;
+	width: 90%;	
+	height: auto;
+}
+
+.section .left {
+	text-align: left;
+
+}
+
+.section .image.left {
+	justify-content: right;
+
+}
+
+.section .image.right {
+	justify-content: flex-start;
+}
+
+.section .center {
+	width: 100%;
+	max-width: 1024px;
+	text-align: center;
+}
+
+.section h2 {
+	color: #444;
+	font-size: 42px;
+	font-weight: 500;
+	margin: 5px 0;
+
+}
+
+.section p {
+	color: #555;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.4;
+	margin: 24px 0 12px;
+}
+
+.section p b {
+	font-weight: 500;
+	color: #444;
+}
+
+.section.background {
+	padding: 30px 0;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.section.background h2 {
+	color: #fff;
+	font-size: 64px;
+	font-weight: 500;
+	margin: auto;
+}
+
+.section.background p {
+	color: #fff;
+	font-size: 32px;
+	margin: auto 16px;
+	font-weight: 400;
+}
+
+.google-searchbar {
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+	height: 44px;
+	line-height: 44px;
+	padding: 0 16px;
+	font-size: 16px;
+	font-family: arial, "Roboto Light", "Noto", sans-serif;
+	font-weight: normal;
+	font-feature-settings: initial;
+	color: #000;
+	margin: 16px 0;
+	cursor: text;
+	text-align: left;
+	max-width: 512px;
+	width: 100%;
+	display: inline-block;
+}
+
+.google-searchbar:hover {
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.google-searchbar .buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	font-size: 24px;
+	color: #4285f4;
+	height: 100%;
+}
+
+.google-searchbar .buttons * {
+	cursor: pointer;
+}
+
+.google-searchbar .buttons :first-child {
+	margin: 0 16px;
+}
+
+.google-definition {
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	font-family: arial, sans-serif;
+	font-feature-settings: initial;
+	background: #fff;
+	padding: 16px;
+	margin: 16px 0;
+	color: #222;
+	border-radius: 2px;
+	text-align: left;
+	max-width: 512px;
+	width: 100%;
+	display: inline-block;
+}
+
+.google-definition h1 {
+	font-size: 32px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.google-definition h3 {
+	font-size: 18px;
+	margin: 0;
+	font-weight: normal;
+}
+
+.google-definition #listen:hover {
+	color: #000;
+	cursor: pointer;
+	user-select:none;
+}
+
+.google-definition .noun {
+	padding-top: 10px;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.google-definition .definition {
+	display: list-item;
+	margin-left: 30px;
+	padding-left: 0;
+	padding-top: 10px;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.google-definition .definition b {
+	font-weight: bold;
+}
+
+.google-definition .definition.no-bullet {
+	display: block;
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+.google-definition .definition .example {
+	color: #878787;
+}
+
+.google-definition .definition .synonyms {
+	display: flex;
+}
+
+.google-definition .definition .synonyms span:first-child {
+	margin-right: 3px;
+}
+
+.google-definition .definition a {
+	color: #1a0dab;
+	text-decoration: none;
+}
+
+.google-definition .definition a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* FLIPPING CARDS -- You click, they flip, simple enough */
+.card-toogle {
+  display: none;
+}
+
+.section {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+ 
+
+}
+
+.card {
+  text-align: left;
+  width: 220px;
+  height: 320px; /* Reduce the height a bit to minimize movement on hover */
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  cursor: pointer;
+  transition: 0.1s all ease-out;
+  font-size: 18px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+   flex: 1 0 220px;
+}
+
+.card:hover {
+  /* Remove the width and height change on hover */
+  margin: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+input.card-toogle:checked ~ .card {
+  background: #eee;
+  width: 240px;
+  height: 360px;
+  margin: 5px;
+  padding: 20px;
+
+}
+
+input.card-toogle:checked ~ .card .question {
+  display: none;
+}
+
+input.card-toogle:checked ~ .card .answer {
+  display: block;
+}
+
+.card:active,
+input.card-toogle:checked ~ .card:active {
+  background: #e5e5e5;
+  width: 220px;
+  height: 320px; /* Restore the original height on active state */
+  margin: 15px;
+  padding: 10px;
+}
+
+.card .answer {
+  display: none;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.card b {
+  font-weight: 600;
+  color: #333;
+
+}
+
+.card a {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: underline;
+
+}
+
+
+
+
+/* Styling for the title section */
+.t1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.conclusion-title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.conclusion-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+}
+
+/* Styling for the conclusion section */
+.conclusions-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conclusion-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1500px; /* Set a maximum width for the containers */
+  margin: 30px; /* Center the containers horizontally */
+}
+
+.conclusion {
+  flex: 1; /* Let the conclusions take equal space */
+  margin: 0 10px; /* Add some margin between the conclusions */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 20000;
+}
+
+.conclusion-member {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.conclusion p {
+	margin: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+
+
+/* Styling for the disclaimer */
+.disclaimer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 20000;
+}
+
+.disclaimer-text {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  text-align: right;
+}
+
+.disclaimerimg {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 20000;
+}
+
+
+
+
