@@ -525,6 +525,8 @@ button[type="submit"]:hover {
     margin-right: 5px;
 }
 
+
+
 /* Para pantallas menores a 500px: sigue habiendo 2 tarjetas por fila */
 @media (max-width: 500px) {
     .service-card {
@@ -533,7 +535,7 @@ button[type="submit"]:hover {
     }
 
     .service-card h3 {
-        font-size: 1.2rem; /* Hace que el icono sea más pequeño */
+        font-size: 1rem; /* Hace que el icono sea más pequeño */
     }
 }
 
