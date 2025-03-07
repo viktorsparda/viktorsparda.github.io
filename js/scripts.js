@@ -181,12 +181,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const validaciones = {
         nombre: value => value.trim().length >= 3, // Nombre debe tener al menos 3 caracteres
         email: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value), // Formato de email válido
+        telefono: value => /^\d{10}$/.test(value), // Teléfono debe tener exactamente 10 dígitos
         mensaje: value => value.trim().length >= 10 // Mensaje debe tener al menos 10 caracteres
     };
 
     const mensajesError = {
         nombre: 'El nombre debe tener al menos 3 caracteres.',
         email: 'Por favor, ingresa un correo electrónico válido.',
+        telefono: 'El teléfono debe tener exactamente 10 dígitos.',
         mensaje: 'El mensaje debe tener al menos 10 caracteres.'
     };
 
@@ -196,19 +198,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const nombre = document.getElementById('name');
         const email = document.getElementById('email');
+        const telefono = document.getElementById('phone');
         const mensaje = document.getElementById('message');
 
         const nombreValido = validarCampo(nombre, validaciones.nombre, mensajesError.nombre);
         const emailValido = validarCampo(email, validaciones.email, mensajesError.email);
+        const telefonoValido = validarCampo(telefono, validaciones.telefono, mensajesError.telefono);
         const mensajeValido = validarCampo(mensaje, validaciones.mensaje, mensajesError.mensaje);
 
-        if (nombreValido && emailValido && mensajeValido) {
-            alert('¡Mensaje enviado con éxito!'); // Mensaje de éxito
-            contactForm.reset();
-        } else {
-            alert('Por favor, corrige los errores antes de continuar.'); // Mensaje de error general
-        }
-    });
+        if (nombreValido && emailValido && telefonoValido && mensajeValido) {
+        alert('¡Mensaje enviado con éxito!'); // Mensaje de éxito
+        contactForm.reset();
+    } else {
+        alert('Por favor, corrige los errores antes de continuar.'); // Mensaje de error general
+    }
+});
 
     // Validar campos mientras el usuario escribe
     document.getElementById('name').addEventListener('input', function() {
@@ -219,7 +223,53 @@ document.addEventListener('DOMContentLoaded', function() {
         validarCampo(this, validaciones.email, mensajesError.email);
     });
 
+    document.getElementById('phone').addEventListener('input', function() {
+        validarCampo(this, validaciones.telefono, mensajesError.telefono);
+    });
+
     document.getElementById('message').addEventListener('input', function() {
         validarCampo(this, validaciones.mensaje, mensajesError.mensaje);
     });
 });
+
+
+
+document.querySelectorAll('.gallery-image').forEach(image => {
+    image.addEventListener('click', function () {
+        let overlay = document.querySelector('.overlay');
+
+        // Si no existe el overlay, lo creamos
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            document.body.appendChild(overlay);
+        }
+
+        // Mostramos el overlay
+        overlay.style.display = 'block';
+
+        // Expandimos la imagen
+        this.classList.add('expanded');
+
+        // Función para cerrar la imagen
+        const closeImage = () => {
+            image.classList.remove('expanded');
+            overlay.style.display = 'none';
+        };
+
+        // Agregar evento al overlay para cerrar la imagen
+        overlay.onclick = closeImage;
+
+        // Para evitar que al hacer clic en la imagen se cierre inmediatamente
+        setTimeout(() => {
+            image.onclick = () => {
+                closeImage();
+                // Evitar que el clic en la imagen deshabilite futuras expansiones
+                setTimeout(() => {
+                    image.onclick = null; // Restauramos el evento inicial
+                }, 100);
+            };
+        }, 100);
+    });
+});
+

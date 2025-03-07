@@ -540,7 +540,7 @@ button[type="submit"]:hover {
 }
 
 /* Estilos Responsivos */
-@media (max-width: 905px) {
+@media (max-width: 973px) {
     .menu-toggle {
         display: block;
     }
@@ -594,4 +594,111 @@ button[type="submit"]:hover {
     color: red;
     font-size: 0.8em;
     margin-top: 5px;
+}
+
+
+
+/* Estilos para la sección de Flotilla */
+.flotilla-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flotilla-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Múltiples columnas en pantallas grandes */
+    gap: 10px;
+    max-width: 600px; /* Limita el ancho para que no ocupe toda la pantalla */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Mantiene proporción uniforme */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la imagen expandida */
+.gallery-item img.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 80%; /* Máximo ancho del 80% de la pantalla */
+    max-height: 80vh; /* Máximo alto del 80% de la altura de la pantalla */
+    width: auto; /* Mantener la relación de aspecto */
+    height: auto; /* Mantener la relación de aspecto */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px; /* Márgenes alrededor de la imagen */
+}
+
+/* Fondo oscuro detrás de la imagen expandida */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none; /* Oculto por defecto */
+}
+
+.flotilla-info {
+    flex: 1 1 35%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.flotilla-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.flotilla-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flotilla-info ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flotilla-info ul li i {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .flotilla-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+        max-width: 100%; /* Permite que se ajuste al tamaño del contenedor */
+    }
 }
