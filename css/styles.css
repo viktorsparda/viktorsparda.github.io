@@ -243,7 +243,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .service-card {
@@ -251,10 +251,12 @@ main {
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px;
+    flex: 1 1 calc(33.33% - 20px); /* 3 tarjetas por fila en pantallas grandes */
     max-width: 350px;
+    min-width: 150px; /* Ajuste mínimo para evitar que se deformen */
     text-align: center;
     transition: all 0.3s ease;
+
 }
 
 .service-card:hover {
@@ -266,11 +268,13 @@ main {
     font-size: 3rem;
     color: #ff6b6b;
     margin-bottom: 20px;
+     
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    max-width: 100%;
 }
 
 /* Estilos de Detalles de Servicios */
@@ -514,10 +518,27 @@ button[type="submit"]:hover {
     color: #ff6b6b;
     margin-right: 5px;
 }
+
+/* Para pantallas menores a 500px: sigue habiendo 2 tarjetas por fila */
+@media (max-width: 500px) {
+    .service-card {
+        flex: 1 1 calc(50% - 10px); /* Ajuste fino para evitar colapsos */
+        
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem; /* Hace que el icono sea más pequeño */
+    }
+}
+
 /* Estilos Responsivos */
-@media (max-width: 768px) {
+@media (max-width: 905px) {
     .menu-toggle {
         display: block;
+    }
+
+     .service-card {
+        flex: 1 1 calc(50% - 20px); /* Ocupan la mitad del ancho */
     }
 
     .navbar {
