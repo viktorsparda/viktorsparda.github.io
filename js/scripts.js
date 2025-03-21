@@ -207,7 +207,7 @@ contactForm.addEventListener('submit', function(event) {
         // Enviar datos al PHP usando Fetch API
         const formData = new FormData(contactForm);
 
-        fetch('../enviar.php', {
+        fetch('enviar.php', {
             method: 'POST',
             body: formData
         })

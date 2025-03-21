@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -16,35 +13,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = htmlspecialchars($_POST['phone']);
     $mensaje = htmlspecialchars($_POST['message']);
 
-    if (empty($nombre) || empty($email) || empty($mensaje)) {
-        echo "Error: Campos obligatorios vacíos.";
-        exit;
-    }
-
     $mail = new PHPMailer(true);
-
-    try {
-        // Configuración SMTP para Outlook/Hotmail
-        $mail->isSMTP();
-        $mail->Host = 'smtp-mail.outlook.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'x-elite123@hotmail.com'; // Tu correo
-        $mail->Password = 'klzyqchphqlhgclj'; // Tu contraseña
+    $mail->CharSet = 'UTF-8'; // <-- Añade esta línea
+    $mail->Encoding = 'base64'; // Opcional, para codificación segura
+try {
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'logisticasprueba@gmail.com'; 
+        $mail->Password = 'ogcd zakn kzra vuhw'; // Contraseña de aplicación
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        // Configuración del correo
-        $mail->setFrom('x-elite123@hotmail.com', 'Logísticas Castro');
-        $mail->addAddress('230103@gmail.com'); // Correo destino
+        $mail->setFrom('logisticasprueba@gmail.com', 'Logísticas Castro');
+        $mail->addAddress('230103@upbc.edu.mx');
         $mail->Subject = 'Nuevo mensaje de contacto';
-        $mail->Body = "Nombre: $nombre\nEmail: $email\nTeléfono: $telefono\nMensaje: $mensaje";
+        $mail->Body = "Nombre: $nombre\nEmail: $email\nTeléfono: $telefono\nMensaje: $mensaje";// Si usas HTML:
+        $mail->isHTML(true);
+        $mail->Body = "<p>Nombre: $nombre</p><p>Email: $email</p><p>Teléfono: $telefono</p><p>Mensaje: $mensaje</p>";
+        $mail->AltBody = "Nombre: $nombre\nEmail: $email\nTeléfono: $telefono\nMensaje: $mensaje"; // Versión texto plano
 
         $mail->send();
         echo "success";
     } catch (Exception $e) {
         echo "Error al enviar: " . $mail->ErrorInfo;
     }
-} else {
-    echo "Método no permitido.";
 }
 ?>
