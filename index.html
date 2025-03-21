@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logísticas Castro</title>
+    <meta name="description" content="Logísticas Castro - Transporte profesional, almacenamiento y distribución en Mexicali. Servicios logísticos confiables desde 2020.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Encabezado y Menú de Navegación -->
     <header>
         <div class="container">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo Logística Mexicali" class="logo-img">
-                <!--  <span class="logo-subtitle">Logísticas Castro</span> -->
+                <img src="img/logo.png" alt="Logo Logísticas Castro" class="logo-img">
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -154,10 +153,10 @@
             <h3>Información de la Flotilla</h3>
             <ul>
                 <li><i class="fas fa-truck-moving"></i> Unidades tipo trailer con caja seca de 53 pies y 48 pies</li>
-                <li><i class="fas fa-truck-moving"></i> Thorton con capacidad de 16 tarimas</li>
+                <li><i class="fas fa-truck-pickup"></i> Thorton con capacidad de 16 tarimas</li>
                 <li><i class="fas fa-truck"></i> Rabón con capacidad de hasta 10 tarimas</li>
-                <li><i class="fas fa-truck"></i> Camioneta 3.5 toneladas con capacidad de 5 tarimas</li>
-                <li><i class="fas fa-truck"></i> Unidades tipo panel con capacidad de 1.5 toneladas</li>
+                <li><i class="fas fa-truck-monster"></i> Camioneta 3.5 toneladas con capacidad de 5 tarimas</li>
+                <li><i class="fas fa-truck-pickup"></i> Unidades tipo panel con capacidad de 1.5 toneladas</li>
             </ul>
         </div>
     </div>
@@ -168,22 +167,22 @@
 
 <!-- Sección de Clientes -->
 <section class="content-section" id="clientes">
-    <h2>Nuestros Clientes</h2>
-    <div class="clients">
-        <div class="client-logo">
-            <img src="img/cliente1.png" alt="Cliente 1">
+        <h2>Nuestros Clientes</h2>
+        <div class="clients">
+            <div class="client-logo">
+                <img src="img/cliente1.png" alt="Cliente Industrial Mexicali">
+            </div>
+            <div class="client-logo">
+                <img src="img/cliente2.png" alt="Cliente Distribuciones BC">
+            </div>
+            <div class="client-logo">
+                <img src="img/cliente3.png" alt="Cliente Alimentos Frescos">
+            </div>
+            <div class="client-logo">
+                <img src="img/cliente4.png" alt="Cliente Maquinaria Pesada">
+            </div>
         </div>
-        <div class="client-logo">
-            <img src="img/cliente2.png" alt="Cliente 2">
-        </div>
-        <div class="client-logo">
-            <img src="img/cliente3.png" alt="Cliente 3">
-        </div>
-        <div class="client-logo">
-            <img src="img/cliente4.png" alt="Cliente 4">
-        </div>
-    </div>
-</section>
+    </section>
 
 <!-- Sección de Testimonios -->
 <section class="content-section" id="testimonios">
@@ -200,7 +199,7 @@
     </div>
 </section>
 
-<!-- Sección de Nuestro Equipo (sin información de contacto) -->
+<!-- Sección de Nuestro Equipo -->
 <section class="content-section" id="equipo">
     <h2>Nuestro Equipo</h2>
     <div class="team">
@@ -213,7 +212,6 @@
 </section>
 
 <!-- Sección de Contacto -->
-<!-- Sección de Contacto -->
 <section class="content-section" id="contacto">
     <h2>Contacto</h2>
     <div class="contact-container">
@@ -224,7 +222,7 @@
             <p><i class="fas fa-briefcase"></i> Gerente de Logística</p>
             <p><i class="fas fa-map-marker-alt"></i> Central de Abastos de Mexicali</p>
             <p><i class="fas fa-location-dot"></i> Blvd. Lázaro Cárdenas s/n</p>
-            <p><i class="fas fa-warehouse"></i> Bodega G-11, Ejido Puebla</p>
+            <p><i class="fas fa-warehouse"></i> Bodega A-14, Ejido Puebla</p>
             <p><i class="fas fa-city"></i> Mexicali, B.C.</p>
             <p><i class="fas fa-phone"></i> Tel. 686-214-3830</p>
             <p><i class="fas fa-envelope"></i> josse_castro_flores@hotmail.com</p>
@@ -233,7 +231,7 @@
         <!-- Sección 2: Formulario de Contacto -->
         <div class="contact-form">
             <h3>Envíanos un Mensaje</h3>
-            <form id="contact-form">
+            <form id="contact-form" action="enviar.php" method="POST">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" required>
@@ -257,7 +255,7 @@
         <!-- Sección 3: Mapa de Google Maps -->
         <div class="contact-map">
             <h3>Nuestra Ubicación</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.5475909231363!2d-115.34260872417389!3d32.57431695249639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d775ad3b5c6319%3A0x6276455153ef437d!2sCentral%20De%20Abastos%20De%20Mexicali!5e0!3m2!1ses-419!2smx!4v1741209309138!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1223.5475909231363!2d-115.34260872417389!3d32.57431695249639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d775ad3b5c6319%3A0x6276455153ef437d!2sCentral%20De%20Abastos%20De%20Mexicali!5e0!3m2!1ses-419!2smx!4v1741209309138!5m2!1ses-419!2smx" style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <p><i class="fas fa-map-pin"></i> Ampliar el mapa</p>
         </div>
     </div>
@@ -267,11 +265,11 @@
 
 <!-- Pie de Página -->
 <footer>
-    <div class="container">
-        <p>&copy; 2025 Logística Mexicali. Todos los derechos reservados.</p>
-    </div>
-</footer>
+        <div class="container">
+            <p>&copy; 2025 Logísticas Castro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-<script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

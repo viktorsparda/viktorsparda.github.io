@@ -211,7 +211,7 @@ header .container {
 
 /* Estilos del Contenido Principal */
 main {
-    padding: 60px 0;
+    padding: 130px 0 60px;
 }
 
 .content-section {
@@ -702,3 +702,4 @@ button[type="submit"]:hover {
         max-width: 100%; /* Permite que se ajuste al tamaño del contenedor */
     }
 }
+

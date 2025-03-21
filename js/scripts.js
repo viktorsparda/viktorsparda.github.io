@@ -193,24 +193,38 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Validar al enviar el formulario
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+   // Dentro del evento 'submit' del formulario:
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        const nombre = document.getElementById('name');
-        const email = document.getElementById('email');
-        const telefono = document.getElementById('phone');
-        const mensaje = document.getElementById('message');
+    // Validar todos los campos
+    const nombreValido = validarCampo(document.getElementById('name'), validaciones.nombre, mensajesError.nombre);
+    const emailValido = validarCampo(document.getElementById('email'), validaciones.email, mensajesError.email);
+    const telefonoValido = validarCampo(document.getElementById('phone'), validaciones.telefono, mensajesError.telefono);
+    const mensajeValido = validarCampo(document.getElementById('message'), validaciones.mensaje, mensajesError.mensaje);
 
-        const nombreValido = validarCampo(nombre, validaciones.nombre, mensajesError.nombre);
-        const emailValido = validarCampo(email, validaciones.email, mensajesError.email);
-        const telefonoValido = validarCampo(telefono, validaciones.telefono, mensajesError.telefono);
-        const mensajeValido = validarCampo(mensaje, validaciones.mensaje, mensajesError.mensaje);
+    if (nombreValido && emailValido && telefonoValido && mensajeValido) {
+        // Enviar datos al PHP usando Fetch API
+        const formData = new FormData(contactForm);
 
-        if (nombreValido && emailValido && telefonoValido && mensajeValido) {
-        alert('¡Mensaje enviado con éxito!'); // Mensaje de éxito
-        contactForm.reset();
+        fetch('../enviar.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                alert('¡Mensaje enviado con éxito!');
+                contactForm.reset();
+            } else {
+                alert('Error: ' + data);
+            }
+        })
+        .catch(error => {
+            alert('Error de conexión: ' + error);
+        });
     } else {
-        alert('Por favor, corrige los errores antes de continuar.'); // Mensaje de error general
+        alert('Por favor, corrige los errores en el formulario.');
     }
 });
 
